@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=IntelliJ IDEA
+Comment=IntelliJ IDEA
+Exec=/home/cihan/PycharmProjects/TestProject/ pabot --processes 2 TestCases/*.robot
+Terminal=false
+Type=Application
+Categories=Application;

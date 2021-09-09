@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.6.9 on linux)" generated="20210907 05:13:53.265" rpa="false" schemaversion="2">
+<suite id="s1" name="GetAllLinks" source="/home/cihan/PycharmProjects/TestProject/TestCases/GetAllLinks.robot">
+<test id="s1-t1" name="GetAllLinks Test">
+<kw name="launchBrowser" library="Resources">
+<var>${PageTitle}</var>
+<arg>${url1}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210907 05:13:53.385" level="INFO">Opening browser 'Chrome' to base url 'http://demo.guru99.com/test/newtours/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210907 05:13:53.388" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210907 05:13:53.387" endtime="20210907 05:13:53.388"/>
+</kw>
+<msg timestamp="20210907 05:13:53.389" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</msg>
+<status status="FAIL" starttime="20210907 05:13:53.384" endtime="20210907 05:13:53.389"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20210907 05:13:53.389" endtime="20210907 05:13:53.389"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" starttime="20210907 05:13:53.389" endtime="20210907 05:13:53.389"/>
+</kw>
+<status status="FAIL" starttime="20210907 05:13:53.384" endtime="20210907 05:13:53.390"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${Links_number}</var>
+<arg>xpath://a</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20210907 05:13:53.390" endtime="20210907 05:13:53.390"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Links_number}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20210907 05:13:53.391" endtime="20210907 05:13:53.391"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>${Links_number}</value>
+<iter>
+<var name="${i}">${i}</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${linkText}</var>
+<arg>xpath:(//a)[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210907 05:13:53.391" endtime="20210907 05:13:53.391"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${linkText}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20210907 05:13:53.391" endtime="20210907 05:13:53.391"/>
+</kw>
+<status status="NOT RUN" starttime="20210907 05:13:53.391" endtime="20210907 05:13:53.391"/>
+</iter>
+<status status="NOT RUN" starttime="20210907 05:13:53.391" endtime="20210907 05:13:53.391"/>
+</for>
+<kw name="Sleep" library="BuiltIn">
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210907 05:13:53.391" endtime="20210907 05:13:53.391"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT RUN" starttime="20210907 05:13:53.391" endtime="20210907 05:13:53.391"/>
+</kw>
+<status status="FAIL" starttime="20210907 05:13:53.383" endtime="20210907 05:13:53.392">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</status>
+</test>
+<status status="FAIL" starttime="20210907 05:13:53.265" endtime="20210907 05:13:53.392"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="GetAllLinks">GetAllLinks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
